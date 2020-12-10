@@ -16,7 +16,7 @@
     data(){
       return {
         nav:['登录','注销','用户管理','查看个人信息','添加新用户'],
-        currentIndex: 0,
+        currentIndex: null,
       }
     },
     methods:{

@@ -18,7 +18,13 @@ import Nav from './Nav'
       return {
         flag:localStorage.getItem('token')
       }
-    }
+    },
+    updated(){
+      console.log(123);
+      this.flag = localStorage.getItem('token')
+      // console.log(this.flag);
+    },
+    
   }
 </script>
 

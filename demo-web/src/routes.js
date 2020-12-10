@@ -9,6 +9,7 @@ const routes = [
     component: () => import('page/UserManager.vue'),
     meta: {
       requireAuth: true,
+      requireAdmin: true,
     },
   },
   {

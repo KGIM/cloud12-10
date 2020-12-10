@@ -20,6 +20,7 @@
 <script>
 import { queryall, deleteData,nodifyData } from 'network/auth'
 import Button from 'components/Button'
+import jwt from 'jsonwebtoken'
 
 export default {
   name:'User',
@@ -64,9 +65,8 @@ export default {
   components:{
     Button
   },
-  created(){
-    const admin = localStorage.getItem('admin');
-    queryall(admin).then((response)=>{
+  mounted(){
+    queryall().then((response)=>{
       this.user = response.data;
     },(err)=>{
       this.message = "用户权限不足"
